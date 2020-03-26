@@ -208,7 +208,8 @@ nav .search-container input[type=text] {
 
   .drug-pharmacy-main-info .drug-pharmacy-info-img {
     float: none;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 150px;
   }
   .drug-pharmacy-main-info p, .drug-pharmacy-main-info a {

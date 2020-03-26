@@ -238,4 +238,25 @@ nav {
   .welcome-container {
     margin: 0 5vw;
   }
+
+  #search_result_title {
+    font-size: 1.5em;
+  }
+
+  .drug-pharmacy-main-info {
+    .drug-pharmacy-info-img {
+      float: none;
+      width: 300px;
+      height: 150px;
+    }
+
+    p, a{
+      font-size: 20px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }

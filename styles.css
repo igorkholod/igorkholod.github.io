@@ -201,6 +201,23 @@ nav .search-container input[type=text] {
   .welcome-container {
     margin: 0 5vw;
   }
+
+  #search_result_title {
+    font-size: 1.5em;
+  }
+
+  .drug-pharmacy-main-info .drug-pharmacy-info-img {
+    float: none;
+    width: 300px;
+    height: 150px;
+  }
+  .drug-pharmacy-main-info p, .drug-pharmacy-main-info a {
+    font-size: 20px;
+  }
+  .drug-pharmacy-main-info ul {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

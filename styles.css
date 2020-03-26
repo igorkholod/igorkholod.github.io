@@ -26,8 +26,12 @@ nav {
   position: sticky;
   top: 0;
 }
+nav #search_mobile {
+  display: none;
+}
 nav a.left {
   transition: background-color 0.25s ease-in-out;
+  text-align: center;
   text-decoration: none;
   color: white;
   font-size: 18px;
@@ -37,6 +41,7 @@ nav a.left {
 }
 nav a.right {
   transition: background-color 0.25s ease-in-out;
+  text-align: center;
   text-decoration: none;
   color: white;
   font-size: 18px;
@@ -51,6 +56,7 @@ nav .search-container {
   float: left;
   margin: 8px 5px 0 5px;
   position: relative;
+  text-align: center;
 }
 nav .search-container button {
   position: absolute;
@@ -72,12 +78,26 @@ nav .search-container input[type=text] {
   border: none;
 }
 
+@media screen and (max-width: 600px) {
+  nav {
+    position: relative;
+  }
+  nav a.left, nav a.right {
+    display: block;
+    float: none;
+  }
+  nav .search-container {
+    display: none;
+  }
+  nav #search_mobile {
+    display: block;
+  }
+}
 .welcome-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Comic Sans MS", serif;
   color: white;
 }
@@ -165,10 +185,10 @@ nav .search-container input[type=text] {
 }
 
 .about-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-family: "Comic Sans MS", serif;
   color: white;

@@ -21,6 +21,13 @@ body {
   margin: 0 auto;
 }
 
+@mixin middle {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // top navigation bar
 nav {
   font-family: $font;
@@ -28,9 +35,15 @@ nav {
   overflow: hidden;
   position: sticky;
   top: 0;
+
+  #search_mobile {
+    display: none;
+  }
+
   a {
     @mixin nav-button {
       transition: background-color 0.25s ease-in-out;
+      text-align: center;
       text-decoration: none;
       color: white;
       font-size: 18px;
@@ -57,6 +70,7 @@ nav {
     float: left;
     margin: 8px 5px 0 5px;
     position: relative;
+    text-align: center;
 
     button {
       position: absolute;
@@ -83,12 +97,23 @@ nav {
   }
 }
 
-@mixin middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+@media screen and (max-width: 600px) {
+  nav {
+    position: relative;
+
+    a.left, a.right {
+      display: block;
+      float: none;
+    }
+
+    .search-container {
+      display: none;
+    }
+
+    #search_mobile {
+      display: block;
+    }
+  }
 }
 
 // main page screen
@@ -200,8 +225,8 @@ nav {
 // about page
 .about-container {
   @include middle;
+  text-align: center;
   font-family: $font;
   color: white;
   //top: 30%;
-
 }

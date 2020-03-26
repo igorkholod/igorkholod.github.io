@@ -179,7 +179,7 @@ nav .search-container input[type=text] {
   color: white;
 }
 
-@media screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
   nav {
     position: relative;
   }

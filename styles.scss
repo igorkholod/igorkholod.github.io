@@ -97,33 +97,14 @@ nav {
   }
 }
 
-@media screen and (max-width: 600px) {
-  nav {
-    position: relative;
-
-    a.left, a.right {
-      display: block;
-      float: none;
-    }
-
-    .search-container {
-      display: none;
-    }
-
-    #search_mobile {
-      display: block;
-    }
-  }
-}
-
 // main page screen
 .welcome-container {
   @include middle;
   font-family: $font;
   color: white;
+  text-align: center;
 
   p {
-    text-align: center;
     font-size: 40px;
     padding: 0;
   }
@@ -229,4 +210,32 @@ nav {
   font-family: $font;
   color: white;
   //top: 30%;
+}
+
+// phone
+@media screen and (max-width: 600px) {
+  nav {
+    position: relative;
+
+    a.left, a.right {
+      display: block;
+      float: none;
+    }
+
+    .search-container {
+      display: none;
+    }
+
+    #search_mobile {
+      display: block;
+    }
+  }
+
+  .about-container {
+    align-items: flex-start;
+  }
+
+  .welcome-container {
+    margin: 0 5vw;
+  }
 }
